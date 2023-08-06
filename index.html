@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+<body>
+
+  <div class=" w-44 h-auto bg-green-50 mx-auto ">
+    <input class=" border border-gray-700" type="text" id="ru">
+    <!-- row 1 -->
+    <div class="w-auto  my-2 flex-row" >
+      <button class=" h-10 w-10 bg-red-300 " onclick="num('1')">1</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('2')">2</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('3')">3</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('+')">+</button>
+    </div>
+    <!-- row 2 -->
+    <div class="my-2 flex-row"  >
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('4')">4</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('5')">5</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('6')">6</button>
+      <button class=" h-10 w-10 bg-red-300 "  onclick="num('*')">*</button>
+   </div>
+    <!-- row 3  -->
+    <div class="my-2 flex-row"  >
+    <button class=" h-10 w-10 bg-red-300 " onclick="num('7')">7</button>
+    <button class=" h-10 w-10 bg-red-300 " onclick="num('8')">8</button>
+    <button class=" h-10 w-10 bg-red-300 " onclick="num('9')">9</button>
+    <button class=" h-10 w-10 bg-red-300 " onclick="num('/')">/</button>
+    </div>
+   <!-- row 4  -->
+    <div class=" my-2 flex-row"  >
+     <button class=" h-10 w-10 bg-red-300 " onclick="num('1')">0</button>
+     <button class=" h-10 w-10 bg-red-300 "onclick="eq()">=</button>
+     <button class=" h-10 w-10 bg-red-300 " onclick="cler()">c</button>
+     <button class=" h-10 w-10 bg-red-300 " onclick="num('1')">-</button>
+    </div>
+  </div>
+ 
+  <script>
+    function num(char){
+     let c= document.getElementById("ru").value+=char;
+     
+    }
+    function eq()
+    {
+      let x= document.getElementById("ru");
+      x.value=eval(x.value);
+    }
+    function cler(){
+     let c= document.getElementById("ru").value="";
+     
+    }
+  </script>
+  
+</body>
+</html>
